@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header>Some Player</header>
-      </div>
-    );
-  }
-}
+import GlobalStyle from './styles/global';
+
+const App = () => (
+  <>
+    <GlobalStyle />
+    <header>
+      <h1>Some Player</h1>
+    </header>
+  </>
+);
 
 export default App;
