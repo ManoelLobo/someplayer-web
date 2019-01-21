@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import './config/reactotron';
 
@@ -12,9 +13,10 @@ import Player from './components/Player';
 import Header from './components/Header';
 
 import Routes from './routes';
+import store from './store';
 
 const App = () => (
-  <>
+  <Provider store={store}>
     <GlobalStyle />
     <BrowserRouter>
       <Wrapper>
@@ -28,7 +30,7 @@ const App = () => (
         <Player />
       </Wrapper>
     </BrowserRouter>
-  </>
+  </Provider>
 );
 
 export default App;
