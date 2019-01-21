@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
+import './config/reactotron';
+
 import GlobalStyle from './styles/global';
 import 'rc-slider/assets/index.css';
 import { Wrapper, Container, Content } from './styles/components';
