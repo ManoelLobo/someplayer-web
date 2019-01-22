@@ -9,6 +9,8 @@ import {
   Container, Title, List, Playlist,
 } from './styles';
 
+import Loading from '../../components/Loading';
+
 class Browse extends Component {
   static propTypes = {
     getPlaylistsRequest: PropTypes.func.isRequired,
@@ -22,6 +24,7 @@ class Browse extends Component {
         }),
       ),
     }).isRequired,
+    loading: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
@@ -31,7 +34,10 @@ class Browse extends Component {
   render() {
     return (
       <Container>
-        <Title>Browse</Title>
+        <Title>
+          Browse
+          {this.props.playlists.loading && <Loading />}
+        </Title>
 
         <List>
           {this.props.playlists.data.map(playlist => (
