@@ -23,8 +23,8 @@ class Browse extends Component {
           description: PropTypes.string,
         }),
       ),
+      loading: PropTypes.bool,
     }).isRequired,
-    loading: PropTypes.bool.isRequired,
   };
 
   componentDidMount() {
