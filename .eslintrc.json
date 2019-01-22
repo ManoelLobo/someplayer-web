@@ -1,9 +1,10 @@
 {
   "parser": "babel-eslint",
-  "extends": ["react-app", "airbnb"],
+  "extends": ["airbnb"],
   "env": { "browser": true, "jest": true },
   "plugins": ["react", "jsx-a11y", "import"],
   "rules": {
+    "react/destructuring-assignment": "off",
     "react/jsx-filename-extension": [
       "error",
       {
