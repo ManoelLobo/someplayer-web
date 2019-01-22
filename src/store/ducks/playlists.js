@@ -1,6 +1,6 @@
 export const Types = {
-  GET_REQUEST: 'playlist/GET_REQUEST',
-  GET_SUCCESS: 'playlist/GET_SUCCESS',
+  GET_REQUEST: 'playlists/GET_REQUEST',
+  GET_SUCCESS: 'playlists/GET_SUCCESS',
 };
 
 const INITIAL_STATE = {
