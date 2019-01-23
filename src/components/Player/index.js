@@ -19,13 +19,18 @@ import RepeatIcon from '../../assets/images/repeat.svg';
 const Player = ({ player }) => (
   <Container>
     {!!player.currentSong && <Sound url={player.currentSong.file} playStatus={player.status} />}
-    <Current>
-      <img src="https://placeimg.com/640/480/tech" alt="Cover" />
 
-      <div>
-        <span>Music Title</span>
-        <small>Artistic Band</small>
-      </div>
+    <Current>
+      {!!player.currentSong && (
+        <>
+          <img src={player.currentSong.thumbnail} alt={player.currentSong.title} />
+
+          <div>
+            <span>{player.currentSong.title}</span>
+            <small>{player.currentSong.author}</small>
+          </div>
+        </>
+      )}
     </Current>
 
     <Progress>
@@ -75,6 +80,9 @@ const Player = ({ player }) => (
 Player.propTypes = {
   player: PropTypes.shape({
     currentSong: PropTypes.shape({
+      title: PropTypes.string,
+      author: PropTypes.string,
+      thumbnail: PropTypes.string,
       file: PropTypes.string,
     }),
     status: PropTypes.string,
